@@ -1,0 +1,35 @@
+# LeadFlow Med Spa
+
+> LeadFlow Med Spa provides practical lead-conversion audits and implementation support for U.S. med spas.
+
+## Primary services
+- Med spa lead conversion audit
+- Website conversion review
+- Google Business Profile review
+- Social profile review
+- Booking journey review
+- Competitor research
+- Conversion improvement implementation
+
+## Audience
+U.S. med spa owners and operators.
+
+## Important
+- We do not guarantee leads, appointments, revenue, rankings, or other outcomes.
+- Public guides are educational and should not be treated as medical, legal, or financial advice.
+- For current service details, use the website pages.
+
+## Main pages
+- /services.html
+- /free-audit.html
+- /guides.html
+- /about.html
+- /contact.html
+
+## Sample audits
+- /sample-audits/
+- /sample-audits/website-conversion.html
+- /sample-audits/google-business-profile.html
+- /sample-audits/instagram-booking-funnel.html
+
+These are illustrative examples, not client case studies or claimed results.
