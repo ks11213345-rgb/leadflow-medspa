@@ -1,14 +1,14 @@
-<!doctype html>
-<html lang="en-US">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Free Med Spa Conversion Audit | LeadFlow Med Spa</title>
 
   <meta
     name="description"
-    content="Request a free public-facing conversion audit for your U.S. med spa website, Instagram and booking journey."
+    content="Request a free 3-point conversion audit for your U.S. med spa website from LeadFlow Med Spa."
   >
 
   <link
@@ -16,7 +16,7 @@
     href="https://leadflow-medspa.vercel.app/free-audit.html"
   >
 
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="styles.css">
 
   <style>
     :root {
@@ -50,6 +50,8 @@
       text-decoration: none;
     }
 
+    /* HEADER */
+
     .audit-header {
       width: calc(100% - 32px);
       max-width: 1180px;
@@ -57,7 +59,8 @@
       padding: 17px 24px;
       border: 1px solid var(--line);
       border-radius: 22px;
-      background: rgba(255,255,255,.82);
+      background: rgba(255, 255, 255, 0.82);
+
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -68,7 +71,7 @@
       font-family: Georgia, "Times New Roman", serif;
       font-size: 20px;
       font-weight: 700;
-      letter-spacing: -.4px;
+      letter-spacing: -0.4px;
       line-height: 1;
     }
 
@@ -102,6 +105,8 @@
       color: white;
     }
 
+    /* MAIN */
+
     .audit-main {
       max-width: 1180px;
       margin: 0 auto;
@@ -125,10 +130,11 @@
     .audit-intro h1 {
       margin: 0;
       max-width: 850px;
+
       font-family: Georgia, "Times New Roman", serif;
       font-size: clamp(44px, 7vw, 76px);
       font-weight: 400;
-      line-height: .98;
+      line-height: 0.98;
       letter-spacing: -3px;
     }
 
@@ -144,6 +150,8 @@
       font-size: 16px;
     }
 
+    /* FORM LAYOUT */
+
     .audit-layout {
       display: grid;
       grid-template-columns: minmax(0, 1fr) 350px;
@@ -156,7 +164,7 @@
       border: 1px solid #deddd5;
       border-radius: 24px;
       background: var(--card);
-      box-shadow: 0 22px 60px rgba(25,25,20,.07);
+      box-shadow: 0 22px 60px rgba(25, 25, 20, 0.07);
     }
 
     .form-top {
@@ -165,10 +173,11 @@
 
     .form-top h2 {
       margin: 0 0 8px;
+
       font-family: Georgia, "Times New Roman", serif;
       font-size: 31px;
       font-weight: 400;
-      letter-spacing: -.8px;
+      letter-spacing: -0.8px;
     }
 
     .form-top p {
@@ -177,23 +186,27 @@
       font-size: 14px;
     }
 
+    /* FORM FIELDS */
+
     .field {
       margin-bottom: 20px;
-    }
-
-    .field-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
     }
 
     label {
       display: block;
       margin-bottom: 8px;
+
       color: #383b34;
       font-size: 12px;
       font-weight: 700;
-      letter-spacing: .2px;
+      letter-spacing: 0.2px;
+    }
+
+    .optional {
+      color: #8b8c85;
+      font-size: 11px;
+      font-weight: 400;
+      margin-left: 4px;
     }
 
     input,
@@ -201,13 +214,21 @@
       width: 100%;
       border: 1px solid #d8d7cf;
       border-radius: 12px;
+
       background: #fbfbf8;
       color: var(--ink);
+
       padding: 14px 15px;
+
       outline: none;
-      font: inherit;
+
+      font-family: Arial, Helvetica, sans-serif;
       font-size: 14px;
-      transition: border-color .2s, box-shadow .2s, background .2s;
+
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
     }
 
     input {
@@ -222,8 +243,10 @@
     input:focus,
     textarea:focus {
       border-color: #ae925d;
-      background: #fff;
-      box-shadow: 0 0 0 4px rgba(185,155,97,.12);
+      background: #ffffff;
+
+      box-shadow:
+        0 0 0 4px rgba(185, 155, 97, 0.12);
     }
 
     input::placeholder,
@@ -231,58 +254,101 @@
       color: #aaa9a1;
     }
 
+    /* BUTTON */
+
     .submit-button {
       width: 100%;
       min-height: 54px;
+
       margin-top: 4px;
+
       border: 0;
       border-radius: 999px;
+
       background: var(--dark);
-      color: #fff;
+      color: #ffffff;
+
       cursor: pointer;
-      font: inherit;
+
+      font-family: Arial, Helvetica, sans-serif;
       font-size: 14px;
       font-weight: 700;
-      transition: transform .2s, opacity .2s;
+
+      transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
     }
 
     .submit-button:hover {
       transform: translateY(-1px);
-      opacity: .92;
+      opacity: 0.92;
+    }
+
+    .submit-button:disabled {
+      cursor: wait;
+      opacity: 0.65;
+      transform: none;
+    }
+
+    /* DELIVERY MESSAGE */
+
+    .delivery-note {
+      margin: 15px 0 0;
+
+      color: #777970;
+
+      font-size: 13px;
+      line-height: 1.6;
+
+      text-align: center;
     }
 
     .form-note {
-      margin: 16px 0 0;
-      color: #8a8c85;
+      margin: 10px 0 0;
+
+      color: #999a92;
+
       font-size: 11px;
       line-height: 1.6;
+
       text-align: center;
     }
+
+    /* SIDE PANEL */
 
     .side-panel {
       position: sticky;
       top: 25px;
+
       padding: 30px;
+
       border: 1px solid #dfded6;
       border-radius: 22px;
+
       background: #efede4;
     }
 
     .side-panel .number {
       width: 38px;
       height: 38px;
+
       margin-bottom: 24px;
+
       border-radius: 50%;
+
       background: var(--dark);
       color: white;
+
       display: grid;
       place-items: center;
+
       font-size: 12px;
       font-weight: 700;
     }
 
     .side-panel h3 {
       margin: 0 0 22px;
+
       font-family: Georgia, "Times New Roman", serif;
       font-size: 27px;
       font-weight: 400;
@@ -291,9 +357,12 @@
 
     .audit-point {
       padding: 17px 0;
+
       border-top: 1px solid #d7d5cb;
+
       display: flex;
       gap: 12px;
+
       color: #555850;
       font-size: 13px;
     }
@@ -304,33 +373,49 @@
 
     .check {
       flex: 0 0 22px;
+
       width: 22px;
       height: 22px;
+
       border-radius: 50%;
-      background: #fff;
+
+      background: #ffffff;
+
       display: grid;
       place-items: center;
-      font-size: 11px;
+
       color: #967c4c;
+      font-size: 11px;
     }
 
+    /* FOOTER */
+
     .footer {
-      border-top: 1px solid var(--line);
       max-width: 1180px;
+
       margin: 0 auto;
+
       padding: 35px 24px 45px;
+
+      border-top: 1px solid var(--line);
+
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
+
       gap: 30px;
+
       color: #777970;
       font-size: 12px;
     }
 
     .footer strong {
       display: block;
+
       margin-bottom: 7px;
+
       color: var(--ink);
+
       font-family: Georgia, "Times New Roman", serif;
       font-size: 18px;
       font-weight: 400;
@@ -345,14 +430,53 @@
       gap: 20px;
     }
 
-    .copyright {
-      align-self: flex-end;
+    /* SUCCESS */
+
+    .success-box {
+      padding: 40px 10px;
+      text-align: center;
     }
 
+    .success-box h2 {
+      margin: 10px 0 12px;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 34px;
+      font-weight: 400;
+    }
+
+    .success-box p {
+      max-width: 520px;
+
+      margin: 0 auto 25px;
+
+      color: #666;
+      line-height: 1.7;
+    }
+
+    .success-home {
+      display: inline-block;
+
+      padding: 14px 22px;
+
+      border-radius: 999px;
+
+      background: var(--dark);
+      color: white;
+
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    /* MOBILE */
+
     @media (max-width: 800px) {
+
       .audit-header {
         width: calc(100% - 20px);
+
         padding: 15px 17px;
+
         border-radius: 18px;
       }
 
@@ -387,28 +511,25 @@
         border-radius: 20px;
       }
 
-      .field-row {
-        grid-template-columns: 1fr;
-        gap: 0;
-      }
-
       .footer {
         padding: 30px 15px 40px;
+
         flex-direction: column;
       }
 
-      .copyright {
-        align-self: auto;
+      .footer-links {
+        flex-wrap: wrap;
       }
     }
 
     @media (max-width: 450px) {
-      .audit-nav a:nth-child(3) {
-        display: none;
-      }
 
       .brand {
         font-size: 17px;
+      }
+
+      .audit-nav a:nth-child(3) {
+        display: none;
       }
 
       .audit-intro h1 {
@@ -422,135 +543,229 @@
   </style>
 </head>
 
+
 <body>
 
+  <!-- HEADER -->
+
   <header class="audit-header">
-    <a class="brand" href="/">
+
+    <a class="brand" href="index.html">
       LeadFlow
       <small>Med Spa</small>
     </a>
 
     <nav class="audit-nav">
-      <a href="/services.html">Services</a>
-      <a href="/free-audit.html">Free Audit</a>
-      <a href="/guides.html">Guides</a>
-      <a href="/about.html">About</a>
-      <a class="nav-cta" href="/free-audit.html">Get Free Audit</a>
+
+      <a href="services.html">
+        Services
+      </a>
+
+      <a href="free-audit.html">
+        Free Audit
+      </a>
+
+      <a href="guides.html">
+        Guides
+      </a>
+
+      <a href="about.html">
+        About
+      </a>
+
+      <a
+        class="nav-cta"
+        href="free-audit.html"
+      >
+        Get Free Audit
+      </a>
+
     </nav>
+
   </header>
 
+
+  <!-- MAIN -->
 
   <main class="audit-main">
 
     <section class="audit-intro">
-      <p class="eyebrow">U.S. MED SPA · FREE CONVERSION AUDIT</p>
+
+      <p class="eyebrow">
+        U.S. MED SPA · FREE CONVERSION AUDIT
+      </p>
 
       <h1>
-        Find the friction before you spend more on <em>traffic.</em>
+        Find the friction before you spend more on
+        <em>traffic.</em>
       </h1>
 
       <p>
-        Send us your public website and Instagram profile. We'll look at the
-        visible customer journey and identify the first areas worth improving.
+        Send us your public website and we'll look at the visible
+        customer journey and identify the first areas worth improving.
       </p>
+
     </section>
 
 
+    <!-- AUDIT CONTENT -->
+
     <section class="audit-layout">
 
-      <div class="form-card">
+
+      <!-- FORM CARD -->
+
+      <div class="form-card" id="form-card">
 
         <div class="form-top">
-          <h2>Request your free audit.</h2>
+
+          <h2>
+            Request your free audit.
+          </h2>
 
           <p>
             Takes about 60 seconds. No payment and no commitment.
           </p>
+
         </div>
 
 
-        <form id="auditForm">
+        <!-- DIRECT WEBSITE FORM -->
 
-          <div class="field-row">
+        <form
+          id="auditForm"
+          action="https://formsubmit.co/hello.leadflowmedspaa@gmail.com"
+          method="POST"
+        >
 
-            <div class="field">
-              <label for="name">Your name *</label>
-              <input
-                id="name"
-                name="Name"
-                type="text"
-                placeholder="John Smith"
-                autocomplete="name"
-                required
-              >
-            </div>
+          <!-- FormSubmit configuration -->
 
-            <div class="field">
-              <label for="business">Med spa / business name *</label>
-              <input
-                id="business"
-                name="Business"
-                type="text"
-                placeholder="Your Med Spa"
-                required
-              >
-            </div>
+          <input
+            type="hidden"
+            name="_subject"
+            value="New LeadFlow Free Audit Request"
+          >
+
+          <input
+            type="hidden"
+            name="_template"
+            value="table"
+          >
+
+          <input
+            type="hidden"
+            name="_captcha"
+            value="true"
+          >
+
+          <input
+            type="hidden"
+            name="_next"
+            value="https://leadflow-medspa.vercel.app/free-audit.html?submitted=true"
+          >
+
+
+          <!-- NAME -->
+
+          <div class="field">
+
+            <label for="name">
+              Name *
+            </label>
+
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Your name"
+              autocomplete="name"
+              required
+            >
 
           </div>
 
 
+          <!-- WEBSITE -->
+
           <div class="field">
-            <label for="website">Website URL *</label>
+
+            <label for="website">
+              Website URL *
+            </label>
+
             <input
               id="website"
-              name="Website"
+              name="website"
               type="url"
               placeholder="https://yourwebsite.com"
               required
             >
+
           </div>
 
 
-          <div class="field">
-            <label for="instagram">Instagram URL</label>
-            <input
-              id="instagram"
-              name="Instagram"
-              type="url"
-              placeholder="https://instagram.com/yourmedspa"
-            >
-          </div>
-
+          <!-- EMAIL -->
 
           <div class="field">
-            <label for="email">Your email *</label>
+
+            <label for="email">
+              Email *
+            </label>
+
             <input
               id="email"
-              name="Email"
+              name="email"
               type="email"
-              placeholder="you@yourbusiness.com"
+              placeholder="you@business.com"
               autocomplete="email"
               required
             >
+
           </div>
 
 
+          <!-- OPTIONAL MESSAGE -->
+
           <div class="field">
-            <label for="message">
+
+            <label for="improvement">
+
               What are you trying to improve?
+
+              <span class="optional">
+                (optional)
+              </span>
+
             </label>
 
             <textarea
-              id="message"
-              name="Message"
+              id="improvement"
+              name="improvement"
               placeholder="For example: more consultations, better booking conversion, stronger local visibility, etc."
             ></textarea>
+
           </div>
 
 
-          <button class="submit-button" type="submit">
+          <!-- SUBMIT -->
+
+          <button
+            class="submit-button"
+            id="submitButton"
+            type="submit"
+          >
             Request My Free Audit →
           </button>
+
+
+          <!-- DELIVERY EXPECTATION -->
+
+          <p class="delivery-note">
+            We'll send your audit within 2 business days.
+          </p>
+
+
+          <!-- PRIVACY -->
 
           <p class="form-note">
             Your information is only used to respond to your audit request.
@@ -562,9 +777,13 @@
       </div>
 
 
+      <!-- SIDE PANEL -->
+
       <aside class="side-panel">
 
-        <div class="number">01</div>
+        <div class="number">
+          01
+        </div>
 
         <h3>
           What we'll look at.
@@ -572,38 +791,70 @@
 
 
         <div class="audit-point">
-          <span class="check">✓</span>
+
+          <span class="check">
+            ✓
+          </span>
+
           <span>
-            <strong>Website journey</strong><br>
+            <strong>
+              Website journey
+            </strong>
+            <br>
             Is the next action obvious to a potential patient?
           </span>
+
         </div>
 
 
         <div class="audit-point">
-          <span class="check">✓</span>
+
+          <span class="check">
+            ✓
+          </span>
+
           <span>
-            <strong>Booking friction</strong><br>
+            <strong>
+              Booking friction
+            </strong>
+            <br>
             Where could visitors hesitate before contacting you?
           </span>
+
         </div>
 
 
         <div class="audit-point">
-          <span class="check">✓</span>
+
+          <span class="check">
+            ✓
+          </span>
+
           <span>
-            <strong>Local signals</strong><br>
+            <strong>
+              Local signals
+            </strong>
+            <br>
             What could make the business easier to trust and discover?
           </span>
+
         </div>
 
 
         <div class="audit-point">
-          <span class="check">✓</span>
-          <span>
-            <strong>Instagram path</strong><br>
-            Does social traffic have a clear path toward action?
+
+          <span class="check">
+            ✓
           </span>
+
+          <span>
+            <strong>
+              Conversion clarity
+            </strong>
+            <br>
+            Are visitors given a clear reason and path to take action?
+          </span>
+
         </div>
 
       </aside>
@@ -613,60 +864,119 @@
   </main>
 
 
+  <!-- FOOTER -->
+
   <footer class="footer">
 
     <div>
-      <strong>LeadFlow Med Spa</strong>
-      <p>Practical lead-conversion support for U.S. med spas.</p>
+
+      <strong>
+        LeadFlow Med Spa
+      </strong>
+
+      <p>
+        Practical lead-conversion support for U.S. med spas.
+      </p>
+
     </div>
+
 
     <div class="footer-links">
-      <a href="/">Home</a>
-      <a href="/privacy.html">Privacy</a>
-      <a href="/terms.html">Terms</a>
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="privacy.html">
+        Privacy
+      </a>
+
+      <a href="terms.html">
+        Terms
+      </a>
+
     </div>
 
-    <p class="copyright">
+
+    <p>
       © 2026 LeadFlow Med Spa.
     </p>
 
   </footer>
 
 
+  <!-- SUCCESS MESSAGE -->
+
   <script>
-    document.getElementById("auditForm").addEventListener("submit", function (event) {
 
-      event.preventDefault();
+    const params = new URLSearchParams(
+      window.location.search
+    );
 
-      const name = document.getElementById("name").value.trim();
-      const business = document.getElementById("business").value.trim();
-      const website = document.getElementById("website").value.trim();
-      const instagram = document.getElementById("instagram").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const message = document.getElementById("message").value.trim();
+    if (params.get("submitted") === "true") {
 
-      const subject =
-        "Free Audit Request - " + business;
+      const formCard =
+        document.getElementById("form-card");
 
-      const body =
-        "FREE MED SPA AUDIT REQUEST\n\n" +
-        "Name: " + name + "\n" +
-        "Business: " + business + "\n" +
-        "Website: " + website + "\n" +
-        "Instagram: " + (instagram || "Not provided") + "\n" +
-        "Email: " + email + "\n\n" +
-        "What they want to improve:\n" +
-        (message || "Not specified") +
-        "\n\n" +
-        "Submitted from LeadFlow Med Spa website.";
+      if (formCard) {
 
-      const mailto =
-        "mailto:hello.leadflowmedspaa@gmail.com" +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body=" + encodeURIComponent(body);
+        formCard.innerHTML = `
 
-      window.location.href = mailto;
-    });
+          <div class="success-box">
+
+            <div class="eyebrow">
+              REQUEST RECEIVED
+            </div>
+
+            <h2>
+              Thanks — we've got it.
+            </h2>
+
+            <p>
+              We'll review your public website and send your
+              3-point audit within 2 business days.
+            </p>
+
+            <a
+              href="index.html"
+              class="success-home"
+            >
+              Back to LeadFlow →
+            </a>
+
+          </div>
+
+        `;
+
+      }
+
+    }
+
+
+    // Prevent accidental double-submission
+
+    const auditForm =
+      document.getElementById("auditForm");
+
+    const submitButton =
+      document.getElementById("submitButton");
+
+    if (auditForm && submitButton) {
+
+      auditForm.addEventListener(
+        "submit",
+        function () {
+
+          submitButton.disabled = true;
+
+          submitButton.textContent =
+            "Sending Request...";
+
+        }
+      );
+
+    }
+
   </script>
 
 </body>
