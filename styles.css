@@ -2694,3 +2694,49 @@ font-size: 35px;
 font-size: 35px;
 }
 }
+/* =========================================
+   EMERGENCY CONTENT VISIBILITY FIX
+   ========================================= */
+
+/* Make all website content visible even if
+   scroll-reveal JavaScript does not run */
+main *,
+section *,
+.hero *,
+.content *,
+[class*="reveal"],
+[class*="animate"],
+[class*="fade"] {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Reset hidden reveal positions */
+[class*="reveal"],
+[class*="animate"],
+[class*="fade"] {
+  transform: none !important;
+}
+
+/* Ensure text and buttons are always visible */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+button,
+li,
+.card,
+.cta,
+.btn,
+.hero-copy,
+.hero-content,
+.section-copy,
+.section-content {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
