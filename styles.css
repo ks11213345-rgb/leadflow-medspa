@@ -2740,3 +2740,889 @@ li,
   opacity: 1 !important;
   visibility: visible !important;
 }
+/* =========================================================
+   FINAL MOBILE RESPONSIVE FIX
+   Paste this at the VERY END of styles.css
+========================================================= */
+
+@media screen and (max-width: 768px) {
+
+  /* -----------------------------------------
+     GLOBAL
+  ----------------------------------------- */
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  *,
+  *::before,
+  *::after {
+    max-width: 100%;
+  }
+
+
+  /* -----------------------------------------
+     BACKGROUND GLOWS
+  ----------------------------------------- */
+
+  .site-glow {
+    width: 300px;
+    height: 300px;
+    opacity: 0.2;
+  }
+
+  .glow-one {
+    right: -180px;
+  }
+
+  .glow-two {
+    left: -180px;
+  }
+
+
+  /* -----------------------------------------
+     HEADER
+  ----------------------------------------- */
+
+  .site-header {
+    width: calc(100% - 24px);
+    margin: 12px auto 0;
+    padding: 13px 15px;
+
+    gap: 12px;
+
+    border-radius: 18px;
+  }
+
+  .logo {
+    font-size: 19px;
+    line-height: 0.95;
+  }
+
+  .logo span {
+    margin-top: 5px;
+    font-size: 6px;
+    letter-spacing: 1.8px;
+  }
+
+
+  /* Hide desktop navigation */
+
+  .site-header nav {
+    display: none;
+  }
+
+
+  /* Show mobile menu */
+
+  .mobile-menu {
+    display: block;
+    flex-shrink: 0;
+    z-index: 100;
+  }
+
+  .mobile-menu summary {
+    padding: 9px 13px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .mobile-menu > div {
+    position: absolute;
+    top: 48px;
+    right: 0;
+
+    width: min(260px, calc(100vw - 30px));
+
+    padding: 8px;
+
+    border-radius: 15px;
+
+    background: rgba(251, 250, 246, 0.98);
+
+    box-shadow:
+      0 20px 50px rgba(0, 0, 0, 0.15);
+  }
+
+  .mobile-menu a {
+    display: block;
+    padding: 13px 10px;
+
+    font-size: 13px;
+  }
+
+
+  /* -----------------------------------------
+     HERO
+  ----------------------------------------- */
+
+  .hero {
+    width: calc(100% - 24px);
+
+    min-height: auto;
+
+    margin: 0 auto;
+
+    padding:
+      65px 0
+      55px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 45px;
+  }
+
+  .hero-copy {
+    width: 100%;
+  }
+
+  .eyebrow {
+    margin-bottom: 16px;
+
+    font-size: 9px;
+
+    letter-spacing: 1.8px;
+  }
+
+  .hero h1 {
+    width: 100%;
+    max-width: 100%;
+
+    font-size:
+      clamp(42px, 12vw, 60px);
+
+    line-height: 0.98;
+
+    letter-spacing: -2.5px;
+
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+
+  .hero h1 em {
+    display: block;
+  }
+
+  .lead {
+    width: 100%;
+    max-width: 100%;
+
+    margin-top: 22px;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+
+  /* -----------------------------------------
+     HERO BUTTONS
+  ----------------------------------------- */
+
+  .actions {
+    width: 100%;
+
+    margin-top: 27px;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 11px;
+  }
+
+  .button {
+    width: 100%;
+
+    min-height: 54px;
+
+    padding: 0 18px;
+
+    font-size: 13px;
+  }
+
+  .hero-notes {
+    justify-content: center;
+
+    margin-top: 22px;
+
+    text-align: center;
+
+    font-size: 10px;
+
+    gap: 8px;
+  }
+
+
+  /* -----------------------------------------
+     HERO VISUAL
+  ----------------------------------------- */
+
+  .hero-visual {
+    width: 100%;
+
+    min-height: 460px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-grid-lines {
+    opacity: 0.3;
+  }
+
+  .orbit-outer {
+    width: 330px;
+    height: 330px;
+  }
+
+  .orbit-inner {
+    width: 250px;
+    height: 250px;
+  }
+
+  .scorecard {
+    width: calc(100% - 20px);
+
+    padding: 22px;
+
+    border-radius: 22px;
+  }
+
+  .score-top {
+    gap: 12px;
+
+    margin-bottom: 20px;
+  }
+
+  .score-top h3 {
+    font-size: 23px;
+  }
+
+  .score {
+    width: 58px;
+    height: 58px;
+
+    flex-basis: 58px;
+  }
+
+  .score::before {
+    width: 46px;
+    height: 46px;
+  }
+
+  .score span {
+    font-size: 16px;
+  }
+
+  .check {
+    grid-template-columns:
+      30px
+      minmax(0, 1fr)
+      auto;
+
+    gap: 9px;
+
+    padding: 13px 0;
+  }
+
+  .check span {
+    font-size: 11px;
+  }
+
+  .check small {
+    padding: 4px 7px;
+
+    font-size: 8px;
+  }
+
+
+  /* Floating cards */
+
+  .priority-card {
+    top: 0;
+    left: 0;
+
+    width: 145px;
+
+    padding: 12px;
+
+    border-radius: 14px;
+  }
+
+  .priority-card strong {
+    font-size: 13px;
+  }
+
+  .signal-card {
+    right: 0;
+    bottom: 2%;
+
+    padding: 10px 13px;
+
+    font-size: 9px;
+  }
+
+  .dot-one {
+    top: 25px;
+    right: 30px;
+  }
+
+  .dot-two {
+    bottom: 40px;
+    left: 20px;
+  }
+
+
+  /* -----------------------------------------
+     TRUST STRIP
+  ----------------------------------------- */
+
+  .trust-strip {
+    width: calc(100% - 24px);
+
+    padding: 20px 0;
+
+    justify-content: center;
+
+    text-align: center;
+
+    gap: 12px;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+  }
+
+  .trust-strip b {
+    font-size: 12px;
+  }
+
+
+  /* -----------------------------------------
+     ALL SECTIONS
+  ----------------------------------------- */
+
+  .section {
+    width: calc(100% - 24px);
+
+    padding:
+      75px 0;
+  }
+
+  .section-heading {
+    width: 100%;
+
+    margin-bottom: 35px;
+  }
+
+  .section h2 {
+    font-size:
+      clamp(36px, 10vw, 50px);
+
+    line-height: 1.05;
+
+    letter-spacing: -1.8px;
+  }
+
+  .section-heading > p:last-child {
+    margin-top: 18px;
+
+    font-size: 14px;
+  }
+
+
+  /* -----------------------------------------
+     JOURNEY SECTION
+  ----------------------------------------- */
+
+  .intro-section {
+    padding-bottom: 55px;
+  }
+
+  .journey-layout {
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 35px;
+
+    border-radius: 22px;
+  }
+
+  .journey-copy h3 {
+    font-size: 29px;
+
+    margin:
+      12px
+      0
+      14px;
+  }
+
+  .journey-copy p {
+    font-size: 13px;
+  }
+
+  .journey-flow {
+    width: 100%;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 20px;
+  }
+
+  .journey-step {
+    width: 100%;
+  }
+
+  .journey-step span {
+    margin-bottom: 6px;
+  }
+
+  .journey-step strong {
+    font-size: 18px;
+  }
+
+  .journey-line {
+    width: 1px;
+    height: 20px;
+
+    margin: 0 0 0 5px;
+
+    background:
+      linear-gradient(
+        180deg,
+        var(--gold),
+        transparent
+      );
+  }
+
+
+  /* -----------------------------------------
+     FEATURE GRID
+  ----------------------------------------- */
+
+  .grid.three,
+  .cards-grid,
+  .metrics-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .grid {
+    gap: 15px;
+  }
+
+  .feature {
+    min-height: 280px;
+
+    padding: 24px;
+
+    border-radius: 20px;
+  }
+
+  .feature-top {
+    margin-bottom: 45px;
+  }
+
+  .feature h3 {
+    font-size: 25px;
+  }
+
+  .feature p {
+    font-size: 13px;
+  }
+
+  .feature-meter {
+    left: 24px;
+    right: 24px;
+    bottom: 22px;
+  }
+
+
+  /* -----------------------------------------
+     DARK SECTION
+  ----------------------------------------- */
+
+  .dark {
+    padding:
+      75px 12px;
+  }
+
+  .split {
+    display: flex;
+    flex-direction: column;
+
+    gap: 45px;
+  }
+
+  .dark h2 {
+    font-size:
+      clamp(36px, 10vw, 50px);
+  }
+
+  .dark h2 + p {
+    margin-top: 20px;
+
+    font-size: 14px;
+  }
+
+  .dark-orb {
+    width: 330px;
+    height: 330px;
+
+    top: -180px;
+    right: -170px;
+  }
+
+  .mini-list > div {
+    grid-template-columns:
+      38px
+      minmax(0, 1fr);
+
+    gap: 12px;
+
+    padding: 17px 0;
+  }
+
+  .mini-list span {
+    font-size: 18px;
+  }
+
+
+  /* -----------------------------------------
+     SECOND DARK SECTION
+  ----------------------------------------- */
+
+  .dark-section {
+    padding: 75px 0;
+  }
+
+  .dark-grid {
+    display: flex;
+    flex-direction: column;
+
+    gap: 45px;
+  }
+
+  .principle {
+    grid-template-columns:
+      35px
+      minmax(0, 1fr);
+
+    gap: 12px;
+  }
+
+  .principle p {
+    font-size: 18px;
+  }
+
+
+  /* -----------------------------------------
+     SAMPLE SECTION
+  ----------------------------------------- */
+
+  .samples-grid {
+    display: flex;
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 35px;
+  }
+
+  .samples-grid > div {
+    width: 100%;
+  }
+
+  .sample-window {
+    width: 100%;
+
+    transform: none !important;
+
+    border-radius: 20px;
+  }
+
+  .sample-window:hover {
+    transform: none !important;
+  }
+
+
+  /* -----------------------------------------
+     CTA
+  ----------------------------------------- */
+
+  .cta-section {
+    padding: 65px 0;
+  }
+
+  .cta-box {
+    padding:
+      50px 20px;
+
+    border-radius: 22px;
+
+    text-align: center;
+  }
+
+  .cta-box h2 {
+    font-size:
+      clamp(35px, 10vw, 48px);
+  }
+
+
+  /* -----------------------------------------
+     FAQ
+  ----------------------------------------- */
+
+  .faq-question {
+    padding: 19px 0;
+
+    font-size: 14px;
+  }
+
+  .faq-answer p {
+    padding-bottom: 19px;
+
+    font-size: 13px;
+  }
+
+
+  /* -----------------------------------------
+     FOOTER
+  ----------------------------------------- */
+
+  .site-footer {
+    padding:
+      45px 0
+      25px;
+  }
+
+  .footer-top {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 25px;
+
+    padding-bottom: 30px;
+  }
+
+  .footer-links {
+    width: 100%;
+
+    gap: 15px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 18px;
+  }
+
+
+  /* -----------------------------------------
+     OLD / ALTERNATIVE CLASS SYSTEM
+     Prevents mixed layout from old CSS
+  ----------------------------------------- */
+
+  .hero-title {
+    font-size:
+      clamp(42px, 12vw, 60px) !important;
+
+    line-height: 1 !important;
+
+    letter-spacing: -2px !important;
+  }
+
+  .hero-content {
+    width: 100% !important;
+  }
+
+  .hero-content,
+  .hero-copy {
+    min-width: 0 !important;
+  }
+
+  .btn {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: 1fr !important;
+  }
+
+  .info-card {
+    padding: 24px;
+  }
+
+  .metric-item {
+    width: 100%;
+  }
+
+  .metric-item:last-child {
+    grid-column: auto !important;
+  }
+
+
+  /* -----------------------------------------
+     PREVENT ANY HORIZONTAL OVERFLOW
+  ----------------------------------------- */
+
+  .hero *,
+  .section *,
+  .dark *,
+  .dark-section *,
+  .site-footer * {
+    min-width: 0;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media screen and (max-width: 480px) {
+
+  .site-header {
+    padding: 12px 13px;
+  }
+
+  .logo {
+    font-size: 17px;
+  }
+
+  .mobile-menu summary {
+    padding: 8px 11px;
+  }
+
+  .hero {
+    padding-top: 52px;
+  }
+
+  .hero h1,
+  .hero-title {
+    font-size: 42px !important;
+  }
+
+  .lead {
+    font-size: 14px;
+  }
+
+  .hero-visual {
+    min-height: 400px;
+  }
+
+  .orbit-outer {
+    width: 280px;
+    height: 280px;
+  }
+
+  .orbit-inner {
+    width: 210px;
+    height: 210px;
+  }
+
+  .scorecard {
+    padding: 18px;
+  }
+
+  .priority-card {
+    width: 125px;
+  }
+
+  .priority-card span {
+    font-size: 7px;
+  }
+
+  .priority-card strong {
+    font-size: 11px;
+  }
+
+  .signal-card {
+    font-size: 8px;
+  }
+
+  .section {
+    padding:
+      60px 0;
+  }
+
+  .section h2 {
+    font-size: 35px;
+  }
+
+  .journey-layout {
+    padding: 20px;
+  }
+
+  .feature {
+    padding: 20px;
+  }
+
+  .feature h3 {
+    font-size: 23px;
+  }
+
+  .dark {
+    padding:
+      65px 12px;
+  }
+
+  .dark-section {
+    padding:
+      65px 0;
+  }
+
+  .cta-box {
+    padding:
+      42px 17px;
+  }
+
+}
+
+
+/* =========================================================
+   FINAL SAFETY FIX FOR MOBILE OVERFLOW
+========================================================= */
+
+@media screen and (max-width: 768px) {
+
+  img,
+  video,
+  iframe,
+  canvas,
+  svg {
+    max-width: 100% !important;
+    height: auto;
+  }
+
+  .floating,
+  .priority-card,
+  .signal-card {
+    max-width: calc(100vw - 24px);
+  }
+
+}
